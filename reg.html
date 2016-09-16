@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Выбирете раздел</title>
+   <script src="js/main.js">
+   </script>
+     <meta charset="utf-8">
+     <link href="css/mainstyle.css" rel="stylesheet">
+</head>
+<body>
+   <div class="head-block">
+<nav>
+    <ul>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Portfolio</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+</nav>
+</div>
+   <div class="wrapper">
+             <div id="brand_logo">
+            </div>
+            <div id="navigation">
+            
+        </div><!-- end of navigation -->
+        </div><!-- end of wrapper -->
+    </div><!-- end of header -->
+	<link rel="stylesheet" type="text/css" href="http://demo.sc.chinaz.com//Files/DownLoad/webjs/jQueryParallaxSlider/css/style.css" />
+		<script src="http://demo.sc.chinaz.com//Files/DownLoad/webjs/jQueryParallaxSlider/js/cufon-yui.js" type="text/javascript"></script>
+		<script src="http://demo.sc.chinaz.com//Files/DownLoad/webjs/jQueryParallaxSlider/js/ChunkFive_400.font.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			Cufon.replace('h1',{ textShadow: '1px 1px #000'});
+			Cufon.replace('h2',{ textShadow: '1px 1px #000'});
+			Cufon.replace('.footer',{ textShadow: '1px 1px #000'});
+			Cufon.replace('.pxs_loading',{ textShadow: '1px 1px #000'});
+		</script>
+<div class="header">
+
+</div>
+   <div class="left-block">
+   
+   </div>
+   <div class="right-block">
+   <? if (!isset($_REQUEST['GO']))
+{?>
+    <form action="<?=$_SERVER['SCRIPT_NAME']?>">
+        <p>Логин</p><input type="text" name = "LOGIN" size="15" value=""/><br>
+        <p>Пароль</p><input type="password" name = "PASS" size="15" value=""/><br>
+        <br>
+            <input type="submit" name="GO" value="Войти">
+    </form>
+<?}
+   else {
+        if ($_REQUEST['LOGIN']=="root"&&$_REQUEST['PASS'] == "111")
+        {
+            echo "Succes for user $_REQUEST[LOGIN]";
+        }
+        else
+        {
+            echo "Acces denied";
+        }
+      }
+    ?>
+	
+    <a href="reg.html.php">Регистрация</a>
+	</div>
+    <div class="central-block">      <!-- central block -->
+    <center>
+    <form action="<?=$_SERVER['SCRIPT_NAME']?>">
+        <p>Логин</p><input type="text" name = "LOGIN" size="15" value=""/><br>
+        <p>Пароль</p><input type="password" name = "PASS" size="15" value=""/><br>
+        <p>Повторите пароль</p><input type="password" name = "PASS" size="15" value=""/><br>
+        <p>E-mail</p><input type="text" name = "EMAIL" size="15" value=""/><br>
+        <br>
+            <input type="submit" name="GO" value="Зарегистрироваться">
+    </form>
+    </center>
+    </div>  
+    
+    
+</body>
+</html>
